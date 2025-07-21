@@ -60,7 +60,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class ServiceTest {
 
     @Container
-    private final KafkaContainer kafka = new KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka"));
+    private final KafkaContainer kafka = new KafkaContainer(
+            DockerImageName.parse("confluentinc/cp-kafka:7.5.0")
+    );
 
     @Container
     private final JdbcDatabaseContainer<?> postgreSQL = new PostgreSQLContainer(DockerImageName.parse("postgres"))

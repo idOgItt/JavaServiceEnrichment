@@ -15,6 +15,14 @@ compileJava {
 }
 
 dependencies {
+
+    // Kafka clients
+    implementation 'org.apache.kafka:kafka-clients:3.4.0'
+
+    // JSON
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.2'
+
+
     // mongodb
     implementation 'org.mongodb:mongodb-driver-sync:4.9.1'
 
@@ -22,8 +30,8 @@ dependencies {
     implementation 'ch.qos.logback:logback-classic:1.4.5'
 
     // code generator
-    compileOnly 'org.projectlombok:lombok:1.18.26'
-    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+    compileOnly 'org.projectlombok:lombok:1.18.38'
+    annotationProcessor 'org.projectlombok:lombok:1.18.38'
 
     // configuration
     implementation 'com.typesafe:config:1.4.2'
@@ -42,8 +50,8 @@ dependencies {
     testImplementation "org.testcontainers:kafka:1.17.6"
     testImplementation "org.testcontainers:postgresql:1.17.6"
     testImplementation "org.testcontainers:mongodb:1.18.0"
-    testCompileOnly "org.projectlombok:lombok:1.18.26"
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.26'
+    testCompileOnly "org.projectlombok:lombok:1.18.38"
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.38'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     testImplementation 'org.apache.kafka:kafka-clients:3.4.0'
